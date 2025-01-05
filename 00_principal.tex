@@ -1,0 +1,147 @@
+%% Modelo de TCC - IFBA Euclides da Cunha
+%% 
+%% versao 1.0
+%% 2024 Prof. Evilasio de Sousa Junior
+%% https://github.com
+
+%% Alteração do projeto bare_conf de Michael Shell
+%% http://www.michaelshell.org/
+
+%% Alteração do projeto Template para TCC na classe IFBATCC do Prof. Antônio Cleber de Sousa Araújo https://github.com/cleberaraujo/ifbatcc.git IFBA Santo Antõnio de Jesus
+
+%%% Utiliza elementos do projeto ifbathesis.cls
+%%%    Author              = "Luis Gustavo Cardoso Lima",
+%%%    Version             = "1.0",
+%%%    Date                = "21 Nov 2018",
+%%%    Filename            = "ifbathesis.cls",
+%%%    Address             = "Instituto Federal da Bahia
+%%%                           GSORT",
+
+%% Carrega a classe ifbatcc
+%% Opcoes: * Idiomas
+%%           pt   - português (padrao)
+%%           en   - inglês
+%%         * Tipos de Trabalhos (pelos graus de formação)
+%%           tec  - para TCC de cursos tecnólogos (padrão)
+%%           bsc  - para monografias de graduação
+%%           msc  - para dissertações de mestrado
+%%           qual - exame de qualificação de mestrado
+%%           prop - exame de qualificação de doutorado
+%%           phd  - para teses de doutorado
+%%         * Cursos do IFBA/EUC
+%%           ads  - Análise e Desenvolvimento de Sistemas
+%%           rde  - Redes de Computadores (padrão)
+%%           mul  - Produção Multimídia
+%%         * Mídia
+%%           scr  - para versão eletrônica (PDF) / consulte o guia do usuário
+%%         * Estilo
+%%           classic - estilo original a la TAOCP (deprecated)
+%%           std     - novo estilo a la CUP (padrão)
+%%         * Paginação
+%%           oneside - para impressão em face única
+%%           twoside - para impressão em frente e verso (padrão)
+\documentclass[tec, rde, classic, a4paper]{x_cuidado_com_esse_arquivo}
+\usepackage[utf8]{inputenc}
+\usepackage[printonlyused, withpage]{acronym}
+
+%% Preâmbulo:
+%% coloque aqui o seu preambulo LaTeX, i.e., declaração de pacotes,
+%% (re)definicoes de macros, medidas, etc.
+
+%% VARIÁVEIS
+
+\author{NOME DO/DA AUTOR/A 1 \\ NOME DO/DA AUTOR/A 2 }
+\title{TITULO DO TRABALHO}
+\adviser{Nome do(a) Orientador(a)}
+\texttype{Trabalho de Conclusão de Curso }
+%\coadviser{Nome do/da Orientador/a}
+% \course{rde}
+%% Inicio do documento
+\begin{document}
+
+
+    \ifbacapa %% Capa do TCC
+    
+\clearpage
+
+    \ifbacontracapa{} %%Apresentação do Trabalho
+
+
+%% Termo de aprovação
+%% Composição da Banca Avaliadora
+\approvalsheet{Data da Aprovação, XX / XX / XXXX}{
+  \comittemember{Profa. Dra. Nome da Professora 1}{Instituto Federal da Bahia}
+  \comittemember{Prof. Me. Nome do Professor 2}{Instituto Federal da Bahia}
+  \comittemember{Profa. Me. Nome da Professora 3}{Instituto Federal da Bahia}
+}
+
+
+
+    % Dedicatória
+    % Comente para ocultar
+    \begin{dedicatory}
+    DIGITE A DEDICATÓRIA AQUI
+    \end{dedicatory}
+    
+    % Agradecimentos
+    % Se preferir, crie um arquivo a parte e o inclua via \include{}
+    \acknowledgements
+    DIGITE OS AGRADECIMENTOS AQUI
+    
+    % Epigrafe
+    % Comente para ocultar
+    % e.g.
+    %  \begin{epigraph}[Tarde, 1919]{Olavo Bilac}
+    %  última flor do Lácio, inculta e bela,\\
+    %  És, a um tempo, esplendor e sepultura;\\
+    %  Ouro nativo, que, na ganga impura,\\
+    %  A bruta mina entre os cascalhos vela.
+    %  \end{epigraph}
+
+    \clearpage
+    
+    \begin{epigraph}[NOTA]{AUTOR}
+    DIGITE AQUI A CITACAO
+    \end{epigraph}
+
+    \resumo % Resumo em Portugues
+    Apresentar de forma sucinta e conectada, cada um dos itens a seguir: Contexto. Motivação. Problema. Justificativa. Objetivos/Proposta de Solução e  Resultados.
+
+    \begin{keywords} % Palavras-chave do resumo em Portugues
+    De, três a cinco, Palavras-chave, Aqui.
+    \end{keywords}
+
+
+
+    \listoffigures % Lista de figuras %Gerado Automáticamente
+    \listoftables % Lista de tabelas %Gerado Automáticamente
+
+
+    % Sintaxe da lista de acordo com a documentação do pacote `acronym'
+    % documentação: http://mirror.unl.edu/ctan/macros/latex/contrib/acronym/acronym.pdf
+    \chapter*{LISTA DE ABREVIATURAS E SIGLAS}
+    \begin{acronym}[]
+        \acro{IHC}{Interface Humano-Computador}
+        
+    \end{acronym}
+
+    \tableofcontents % Sumario %Gerado Automáticamente
+
+    
+                                    \mainmatter %% Parte textual
+    
+    \include{01_intro.tex}
+    
+    \include{02_revisao_biblio.tex}
+    
+    \include{03_desenvolv.tex}
+
+    \include{04_conclusao.tex}
+    
+                                    \backmatter  %% Parte pós-textual
+    
+    
+    \bibliographystyle{abntex2-alf}
+    \bibliography{05_biblio.bib} % Bibliografia BibTeX
+    
+\end{document}
