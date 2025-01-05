@@ -476,7 +476,7 @@
 
 \def\ifbacontracapa{%
     
-  \if@openright\cleardoublepage\else\clearpage\fi
+  %\if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \begin{center}
      \sf\large
@@ -718,6 +718,7 @@
 
 \renewcommand\tableofcontents{%
   \chapter*{\contentsname}
+  \thispagestyle{empty}
   \@starttoc{toc}}
 
 \def\l@part#1#2{%
