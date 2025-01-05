@@ -193,7 +193,7 @@
 % Portuguese
 \if\@language0
   \gdef\@notdefined{N\~{A}O DEFINIDO}
-  \gdef\acknowledgementsname{Agradecimentos}
+  \gdef\acknowledgementsname{AGRADECIMENTOS}
   \gdef\@axiomname{Axioma}
   \gdef\@conjecturename{Conjectura}
   \gdef\@defname{Defini\c{c}\~{a}o}
@@ -520,6 +520,7 @@
 
 \def\approvalsheet#1#2{%
   \newpage
+  \thispagestyle{empty}
   \begin{center}
      \sf\large
       \vskip 5mm
@@ -590,10 +591,31 @@
 %% Acknowledgements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\acknowledgements{%
-  \chapter*{\acknowledgementsname}}
+% \def\acknowledgements{%
+%     \thispagestyle{empty}
+%   \chapter*{}
 
+% }
 
+\def\agradecimentos#1{%
+  \newpage
+  \thispagestyle{empty}
+  \begin{center}
+     \sf\large
+      \vskip 5mm
+      \textbf{%
+        \acknowledgementsname
+      }
+      \vskip 15mm
+  
+    \vspace{1em}
+    \begin{center}
+      {#1}
+    \end{center}
+    
+    \vfill
+  \end{center}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Resumo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1026,8 +1048,10 @@
 %% Acknowledgements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\acknowledgements{%
-  \chapter*{\acknowledgementsname}}
+% \def\acknowledgements{%
+
+%   \chapter*{\acknowledgementsname}
+%   }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1035,8 +1059,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\resumo{%
+    
   \gdef\@keywordsname{\keywordsnamePT}
-  \chapter*{\resumoname}}
+  \chapter*{\resumoname}
+  }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

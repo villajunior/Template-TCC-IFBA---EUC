@@ -40,7 +40,7 @@
 %%         * Paginação
 %%           oneside - para impressão em face única
 %%           twoside - para impressão em frente e verso (padrão)
-\documentclass[tec, rde, classic, a4paper]{x_cuidado_com_esse_arquivo}
+\documentclass[tec, rde, classic, a4paper]{arq_base/x_cuidado_com_esse_arquivo}
 \usepackage[utf8]{inputenc}
 \usepackage[printonlyused, withpage]{acronym}
 
@@ -62,21 +62,21 @@
 
     \ifbacapa %% Capa do TCC
     
-\clearpage
+    \clearpage
 
     \ifbacontracapa{} %%Apresentação do Trabalho
 
 
-%% Termo de aprovação
-%% Composição da Banca Avaliadora
-\approvalsheet{Data da Aprovação, XX / XX / XXXX}{
-  \comittemember{Profa. Dra. Nome da Professora 1}{Instituto Federal da Bahia}
-  \comittemember{Prof. Me. Nome do Professor 2}{Instituto Federal da Bahia}
-  \comittemember{Profa. Me. Nome da Professora 3}{Instituto Federal da Bahia}
-}
+    %% Termo de aprovação
+    %% Composição da Banca Avaliadora
+    \approvalsheet{Data da Aprovação, XX / XX / XXXX}{
+      \comittemember{Profa. Dra. Nome da Professora 1}{Instituto Federal da Bahia}
+      \comittemember{Prof. Me. Nome do Professor 2}{Instituto Federal da Bahia}
+      \comittemember{Profa. Me. Nome da Professora 3}{Instituto Federal da Bahia}
+    }
 
 
-\clearpage
+    \clearpage
 
     % Dedicatória
     % Comente para ocultar
@@ -86,8 +86,10 @@
     
     % Agradecimentos
     % Se preferir, crie um arquivo a parte e o inclua via \include{}
-    \acknowledgements
-    DIGITE OS AGRADECIMENTOS AQUI
+    \agradecimentos{
+        Digite os agradecimentos aqui
+    }
+    
     
     % Epigrafe
     % Comente para ocultar
@@ -105,28 +107,15 @@
     DIGITE AQUI A CITACAO
     \end{epigraph}
 
-    \resumo % Resumo em Portugues
-    Apresentar de forma sucinta e conectada, cada um dos itens a seguir: Contexto. Motivação. Problema. Justificativa. Objetivos/Proposta de Solução e  Resultados.
 
-    \begin{keywords} % Palavras-chave do resumo em Portugues
-    De, três a cinco, Palavras-chave, Aqui.
-    \end{keywords}
-
-
-
-    \listoffigures % Lista de figuras %Gerado Automáticamente
-    \listoftables % Lista de tabelas %Gerado Automáticamente
-
-
-    % Sintaxe da lista de acordo com a documentação do pacote `acronym'
-    % documentação: http://mirror.unl.edu/ctan/macros/latex/contrib/acronym/acronym.pdf
-    \chapter*{LISTA DE ABREVIATURAS E SIGLAS}
-    \begin{acronym}[]
-        \acro{IHC}{Interface Humano-Computador}
-        
-    \end{acronym}
-
-    \tableofcontents % Sumario %Gerado Automáticamente
+    \include{00_resumo}
+    
+    \include{arq_base/99_figuras} % Gerado Automaticamente
+    \include{arq_base/99_tabelas} % Gerado Automaticamente
+    
+    \include{00_siglas}
+    
+    \tableofcontents % Sumario % Gerado Automáticamente
 
     
                                     \mainmatter %% Parte textual
