@@ -535,7 +535,7 @@
     {\sf\large\textbf{\MakeUppercase{\@author}}}
 
     \vspace{3em}
-    \begin{minipage}{0.7\textwidth}
+    \begin{minipage}{1\textwidth}
       \centering
       \sf\large\textbf{\MakeUppercase{\@title}}
     \end{minipage}
