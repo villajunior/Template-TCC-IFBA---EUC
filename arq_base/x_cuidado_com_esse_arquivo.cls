@@ -157,10 +157,10 @@
 
 %% Language Independent
 
-\gdef\@maleadvisertitle{Prof.}
-\gdef\@femaleadvisertitle{Orientadora}
-\gdef\@malecoadvisertitle{Co-orientador}
-\gdef\@femalecoadvisertitle{Co-orientadora}
+\gdef\@maleadvisertitle{Orientador Prof.}
+\gdef\@femaleadvisertitle{Orientadora Profa.}
+\gdef\@malecoadvisertitle{Co-orientador Prof.}
+\gdef\@femalecoadvisertitle{Co-orientadora Profa.}
 \gdef\@tecnodissertation{}
 \gdef\@bachelordissertation{Monografia}
 \gdef\@mastersdissertation{Disserta\c{c}\~{a}o de Mestrado}
@@ -437,17 +437,17 @@
     INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E \\
     TECNOLOGIA DA BAHIA CAMPUS EUCLIDES DA CUNHA 
   }
-  \vskip 25mm
+  \vskip 15mm
   \textbf{%
     CURSO TÉCNICO EM INFORMÁTICA – INTEGRADO
   }
-  \vskip 35mm
+  \vskip 25mm
   %\textbf{\MakeTextUppercase{\@texttype}}
   %\vskip 25mm
   \begin{minipage}{150mm}
     \begin{center}
       \textbf{\@author}
-      \vskip 15mm
+      \vskip 25mm
       \textbf{\@title}
       \vskip\baselineskip
       
