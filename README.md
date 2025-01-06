@@ -2,7 +2,7 @@
 %% 
 %% versao 1.0
 %% 2024 Prof. Evilasio de Sousa Junior
-%% https://github.com
+%% https://github.com/villajunior/Template-TCC-IFBA---EUC.git
 
 %% Alteração do projeto bare_conf de Michael Shell
 %% http://www.michaelshell.org/
