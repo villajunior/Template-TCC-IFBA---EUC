@@ -276,7 +276,7 @@
 
 \def\address#1{%
   \gdef\@ano{#1}}
-\def\@ano{2024}
+\def\@ano{2025}
 %% Authors identification
 
 \def\author#1{%
@@ -447,7 +447,7 @@
   \begin{minipage}{150mm}
     \begin{center}
       \textbf{\@author}
-      \vskip 25mm
+      \vskip 15mm
       \textbf{\@title}
       \vskip\baselineskip
       
